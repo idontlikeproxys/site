@@ -1,1 +1,35 @@
-<!--do the cloaker thing here-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
+</head>
+<body>
+    <button onclick="embedLink()">Open Website Page</button>
+
+    <script>
+        function embedLink() {
+            var url = "https://imthegoat2024.github.io//";
+            var win = window.open();
+            win.document.body.style.margin = "0";
+            win.document.body.style.height = "100vh";
+
+            var iframe = win.document.createElement("iframe");
+            iframe.style.border = "none";
+            iframe.style.width = "100%";
+            iframe.style.height = "100%";
+            iframe.style.margin = "0";
+            iframe.referrerPolicy = "no-referrer";
+            iframe.allow = "fullscreen";
+            iframe.src = url.toString();
+
+            win.document.body.appendChild(iframe);
+
+            var script = win.document.createElement("script");
+            script.src = "https://3kh0.github.io/js/main.js";
+            win.document.body.appendChild(script);
+        }
+    </script>
+</body>
+</html>
