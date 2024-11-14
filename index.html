@@ -88,8 +88,6 @@
             var script = win.document.createElement("script");
             script.src = "https://3kh0.github.io/js/main.js";
             win.document.body.appendChild(script);
-
-            renderBookmarklets();
         }
 
         function renderBookmarklets() {
@@ -114,6 +112,9 @@
                 container.appendChild(bookmarkletDiv);
             }
         }
+
+        // Render bookmarklets when the page loads
+        window.onload = renderBookmarklets;
     </script>
 </body>
 </html>
