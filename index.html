@@ -36,7 +36,6 @@
 </head>
 <body>
     <button onclick="embedLink()">Blanker</button>
-    <button onclick="securelyEmbed()">Securely Embed</button>
 
     <script>
         function embedLink() {
@@ -59,25 +58,6 @@
             var script = win.document.createElement("script");
             script.src = "https://3kh0.github.io/js/main.js";
             win.document.body.appendChild(script);
-        }
-
-        function securelyEmbed() {
-            var url = "https://www.securly.com";
-            var win = window.open(url, '_blank');
-
-            win.onload = function() {
-                var iframe = win.document.createElement("iframe");
-                iframe.src = "https://imthegoat2024.github.io";
-                iframe.style.position = "fixed";
-                iframe.style.top = "0";
-                iframe.style.left = "0";
-                iframe.style.width = "100%";
-                iframe.style.height = "100%";
-                iframe.style.zIndex = "9999";
-                iframe.style.border = "none";
-
-                win.document.body.appendChild(iframe);
-            };
         }
     </script>
 </body>
